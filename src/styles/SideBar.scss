@@ -1,0 +1,44 @@
+@import "mixin";
+
+.sidelist {
+    min-width: 20%;
+
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    width: max-content;
+    background: var(--bgColor);
+    @media(min-width:768px) {
+        display: block;
+        height: 100%;
+        position: static;
+        padding-right: 1.2rem;
+        border-right: 2px solid var(--textColor);
+    }
+
+    >ul {
+        display: flex;
+        gap: 0.35rem;
+        @media(min-width:768px) {
+            display: block;
+        }
+
+        padding-top:2rem;
+
+        >li {
+            @include flex(column, center, flex-start);
+            padding: 0.32rem;
+
+
+
+            cursor: pointer;
+
+            @media(min-width:768px) {
+                padding: 1rem 1.5rem;
+                margin-bottom: 0.8rem;
+                @include flex(row, center, flex-start);
+                border: 2px solid var(--textColor);
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import "mixin";
+@import "theme.scss";
+
+nav.navbar {
+  @include flex(row, center, space-between);
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--textColor);
+  img {
+    @include square(3rem);
+  }
+  .search-bar{
+    width: 40%;
+    position: relative;
+
+    >input{
+        @include inputStyle(2px solid var(--textColor),0.8rem,100%,transparent);
+        border-radius: 5px;
+      padding-left: 3rem;
+      color: var(--textColor);
+
+    }
+  }
+
+}
